@@ -3,6 +3,14 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+.qhgold {
+  background-color: #fcb914 !important;
+}
+
+.qhgold-text {
+  color: #FCB914 !important;
+}
+
 .materialize-red.lighten-5 {
   background-color: #fdeaeb !important;
 }

@@ -4,6 +4,7 @@
 <head>
     <title>QueensHack 2016</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/materialize.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -11,9 +12,21 @@
 </head>
 
 <body>
-    <nav role="navigation">
-    	<img src="img/qnslogo.png">
+    <nav class="navbar transparent">
+        <div class="nav-wrapper black-text">
+            <img id="logo" src="img/qnslogo.png">
+            <ul class="links right">
+                <li><a href="#info">INFO</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#schedule">SCHEDULE</a></li>
+                <li><a href="#sponsors">SPONSORS</a></li>
+                <li><a class="waves-effect waves-light btn-large qhgold">ATTEND</a></li>
+            </ul>
+        </div>
     </nav>
+    <div class="background">
+        <video id="player" src="videos/bgvid.mp4" autoplay loop muted></video>
+    </div>
 </body>
 
 </html>
