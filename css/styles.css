@@ -1,5 +1,10 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.selected {
+    font-weight: bold;
 }
 
 .navbar {
@@ -15,6 +20,17 @@ body {
 
 .navbar .links {
     padding-top: 35px;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fcb914;
+    opacity: 0.2;
+    z-index: -1;
 }
 
 .background {
@@ -34,16 +50,43 @@ body {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background-size: cover; 
+    background-size: cover;
 }
 
 .welcome-message {
-	color: white;
-	margin: 100px 0px 0px 70px;
-	font-size: -webkit-xxx-large;
+    color: white;
+    margin: 100px 0px 0px 70px;
+    font-size: -webkit-xxx-large;
 }
 
 .welcome-message .people-ticker {
-	display: inline-block;
-	padding: 0px 4px 0px 2px;
+    display: inline-block;
+    padding: 0px 4px 0px 2px;
+}
+
+.ripple {
+    position: absolute;
+    width: 100vmax;
+    height: 100vmax;
+    top: -50vmax;
+    left: -50vmax;
+    border-radius: 50%;
+}
+
+.pad {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.attend-page {
+	display: none;
+}
+
+.attend-page #registrationForm {
+	width: 100%;
+	min-height: 500px;
 }
