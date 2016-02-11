@@ -22,6 +22,24 @@ body {
     padding-top: 35px;
 }
 
+.navbar li {
+    margin-bottom: 10px;
+}
+
+.navbar .link::after {
+    content: '';
+    display: block;
+    margin-top: -13px;
+    width: 0;
+    height: 5px;
+    background: #ffffff;
+    transition: width .3s;
+}
+
+.navbar .link:hover::after {
+    width: 100%;
+}
+
 .overlay {
     position: absolute;
     left: 0;

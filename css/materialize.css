@@ -7425,7 +7425,7 @@ nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul 
 }
 
 nav ul a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  /*background-color: rgba(0, 0, 0, 0.1);*/
 }
 
 nav ul.left {
@@ -8222,8 +8222,8 @@ button.btn-floating {
 }
 
 .btn-large {
-  height: 54px;
-  line-height: 56px;
+  height: 45px;
+  line-height: 47px;
 }
 
 .btn-large i {
