@@ -10,6 +10,7 @@ $(function() {
 
     $('#attendBtn').click(function(e) {
         $(this).removeClass('qhgold').addClass('qhgold-text white selected');
+        goGold();
         var touch = {
             pageX: e.pageX,
             pageY: e.pageY,
@@ -20,8 +21,8 @@ $(function() {
         $('.welcome-message').fadeOut();
         setTimeout(function(e) {
             $('.attend-page').fadeIn();
+            $('#registrationForm').focus()
         }, 400)
-        $('#registrationForm').contentWindow.focus()
     })
 });
 
