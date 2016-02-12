@@ -73,3 +73,15 @@ function each(l, fn) {
         fn(l[i]);
     }
 }
+
+function goWhite() {
+    $('#attendBtn').removeClass('qhgold-text white selected').addClass('qhgold');
+    $('.link').css('color', '#fcb914');
+    $('.link').removeClass('whiteLink').addClass('goldLink');
+}
+
+function goGold() {
+    $('#attendBtn').removeClass('qhgold').addClass('qhgold-text white');
+    $('.link').css('color', '#ffffff');
+    $('.link').removeClass('goldLink').addClass('whiteLink');
+}

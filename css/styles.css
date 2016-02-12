@@ -26,7 +26,7 @@ body {
     margin-bottom: 10px;
 }
 
-.navbar .link::after {
+.navbar .whiteLink::after {
     content: '';
     display: block;
     margin-top: -13px;
@@ -36,7 +36,21 @@ body {
     transition: width .3s;
 }
 
-.navbar .link:hover::after {
+.navbar .whiteLink:hover::after {
+    width: 100%;
+}
+
+.navbar .goldLink::after {
+    content: '';
+    display: block;
+    margin-top: -13px;
+    width: 0;
+    height: 5px;
+    background: #fcb914;
+    transition: width .3s;
+}
+
+.navbar .goldLink:hover::after {
     width: 100%;
 }
 
@@ -101,10 +115,10 @@ body {
 }
 
 .attend-page {
-	display: none;
+    display: none;
 }
 
 .attend-page #registrationForm {
-	width: 100%;
-	min-height: 85vh;
+    width: 100%;
+    min-height: 85vh;
 }
