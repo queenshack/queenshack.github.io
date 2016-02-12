@@ -26,6 +26,10 @@ body {
     margin-bottom: 10px;
 }
 
+.navbar .link {
+	transition: width .3s
+}
+
 .navbar .whiteLink::after {
     content: '';
     display: block;
