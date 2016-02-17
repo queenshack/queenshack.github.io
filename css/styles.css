@@ -27,7 +27,7 @@ body {
 }
 
 .navbar .link {
-	transition: width .3s
+    transition: width .3s
 }
 
 .navbar .whiteLink::after {
@@ -134,6 +134,25 @@ body {
     top: 0;
     bottom: 0;
     z-index: -1;
+}
+
+.info-page {
+    display: none;
+    min-width: 90vw;
+    margin-top: 5vh !important;
+    color: #ffffff;
+}
+
+.faq-page {
+    display: none;
+}
+
+.schedule-page {
+    display: none;
+}
+
+.sponsors-page {
+    display: none;
 }
 
 .attend-page {
