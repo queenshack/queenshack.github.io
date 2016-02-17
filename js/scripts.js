@@ -84,7 +84,6 @@ function addTouch(e, variant) {
     el.classList.add('ripple');
     el.style.background = color;
     var trans = 'translate(' + e.pageX + 'px,' + e.pageY + 'px) '
-    console.log(trans);
     var player = el.animate([{
         opacity: 0.5,
         transform: trans + "scale(0) "
@@ -151,7 +150,6 @@ function switchPage(page) {
         }, 400)
     } else if (page == 'sponsors') {
     	$('#sponsorsBtn').removeClass('goldLink').addClass('selected selectedGoldLink');
-    	console.log('shit works')
         setTimeout(function(e) {
             $('.sponsors-page').fadeIn();
         }, 400)
