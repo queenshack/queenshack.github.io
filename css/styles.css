@@ -58,6 +58,24 @@ body {
     width: 100%;
 }
 
+.navbar .selectedWhiteLink::after {
+    content: '';
+    display: block;
+    margin-top: -13px;
+    width: 1;
+    height: 5px;
+    background: #ffffff;
+}
+
+.navbar .selectedGoldLink::after {
+    content: '';
+    display: block;
+    margin-top: -13px;
+    width: 1;
+    height: 5px;
+    background: #fcb914;
+}
+
 .overlay {
     position: absolute;
     left: 0;

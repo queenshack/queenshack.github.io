@@ -133,24 +133,30 @@ function goGold() {
 
 function switchPage(page) {
 	$('.page').fadeOut();
+	$('.link').removeClass('selected');
     if (page === 'info') {
+    	$('#infoBtn').removeClass('whiteLink').addClass('selected selectedWhiteLink');
         setTimeout(function(e) {
             $('.info-page').fadeIn();
         }, 400)
     } else if (page === 'faq') {
+    	$('#faqBtn').removeClass('goldLink').addClass('selected selectedGoldLink');
         setTimeout(function(e) {
             $('.faq-page').fadeIn();
         }, 400)
     } else if (page === 'schedule') {
+    	$('#scheduleBtn').removeClass('whiteLink').addClass('selected selectedWhiteLink');
         setTimeout(function(e) {
             $('.schedule-page').fadeIn();
         }, 400)
     } else if (page == 'sponsors') {
+    	$('#sponsorsBtn').removeClass('goldLink').addClass('selected selectedGoldLink');
     	console.log('shit works')
         setTimeout(function(e) {
             $('.sponsors-page').fadeIn();
         }, 400)
     } else {
+    	$('#attendBtn').addClass('selected');
         setTimeout(function(e) {
             $('.attend-page').fadeIn();
             $('#registrationForm').focus()
