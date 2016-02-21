@@ -143,6 +143,10 @@ body {
     color: #ffffff;
 }
 
+.info-page a {
+	color: #ffffff;
+}
+
 .faq-page {
     display: none;
 }
