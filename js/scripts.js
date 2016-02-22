@@ -57,7 +57,6 @@ function addTouch(e, variant) {
         "top": e.pageY + 'px',
         "background-color": color,
         "border-radius": "50%",
-        "border-style": "solid",
         "width": "20px",
         "height": "20px"
     });
@@ -81,6 +80,8 @@ function goGold() {
 function switchPage(page) {
     $('.page').fadeOut();
     $('.link').removeClass('selected');
+    $('.link').removeClass('selectedWhiteLink');
+    $('.link').removeClass('selectedGoldLink');
     if (page === 'info') {
         $('#infoBtn').removeClass('whiteLink').addClass('selected selectedWhiteLink');
         setTimeout(function(e) {
