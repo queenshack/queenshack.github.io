@@ -10,112 +10,59 @@ $(function() {
 
     $('#infoBtn').click(function(e) {
         goGold();
-        var touch = {
-            pageX: e.pageX,
-            pageY: e.pageY,
-            identifier: 'ripple_' + Math.random() + '__ripple'
-        }
-        addTouch(touch, 'gold');
-        setTimeout(dropTouch(touch), 100)
+        addTouch(e, 'gold');
         switchPage('info');
     });
 
     $('#faqBtn').click(function(e) {
         goWhite();
-        var touch = {
-            pageX: e.pageX,
-            pageY: e.pageY,
-            identifier: 'ripple_' + Math.random() + '__ripple'
-        }
-        addTouch(touch, 'white');
-        setTimeout(dropTouch(touch), 100)
+        addTouch(e, 'white');
         switchPage('faq');
     });
 
     $('#scheduleBtn').click(function(e) {
         goGold();
-        var touch = {
-            pageX: e.pageX,
-            pageY: e.pageY,
-            identifier: 'ripple_' + Math.random() + '__ripple'
-        }
-        addTouch(touch, 'gold');
-        setTimeout(dropTouch(touch), 100)
+        addTouch(e, 'gold');
         switchPage('schedule');
     });
 
     $('#sponsorsBtn').click(function(e) {
         goWhite();
-        var touch = {
-            pageX: e.pageX,
-            pageY: e.pageY,
-            identifier: 'ripple_' + Math.random() + '__ripple'
-        }
-        addTouch(touch, 'white');
-        setTimeout(dropTouch(touch), 100)
+        addTouch(e, 'white');
         switchPage('sponsors');
     });
 
     $('#attendBtn').click(function(e) {
         $(this).removeClass('qhgold').addClass('qhgold-text white selected');
         goGold();
-        var touch = {
-            pageX: e.pageX,
-            pageY: e.pageY,
-            identifier: 'ripple_' + Math.random() + '__ripple'
-        }
-        addTouch(touch, 'gold');
-        setTimeout(dropTouch(touch), 100)
+        addTouch(e, 'gold');
         switchPage('attend');
     })
 });
 
-var slowMo = false;
-var dur = slowMo ? 5000 : 400;
-var players = {};
-var hue = 0;
-
 function addTouch(e, variant) {
-    if (variant === 'gold')
+    if (variant === 'gold') {
         var color = '#fcb914';
-    else
-        var color = 'white';
-    var el = document.createElement('div');
-    el.classList.add('ripple');
-    el.style.background = color;
-    var trans = 'translate(' + e.pageX + 'px,' + e.pageY + 'px) '
-    var player = el.animate([{
-        opacity: 0.5,
-        transform: trans + "scale(0) "
-    }, {
-        opacity: 1.0,
-        transform: trans + "scale(2) "
-    }], {
+        var border = '#ffffff';
+    } else {
+        var color = '#ffffff';
+        var border = '#fcb914';
+    }
 
-        duration: dur
-
+    var div = $('<div>').css({
+        "position": "absolute",
+        "left": e.pageX + 'px',
+        "top": e.pageY + 'px',
+        "background-color": color,
+        "border-radius": "50%",
+        "border-style": "solid",
+        "border-color": border,
+        "width": "20px",
+        "height": "20px"
     });
-    player.playbackRate = 0.1;
-    players[e.identifier || 'mouse'] = player;
-
-    document.body.appendChild(el);
-    player.onfinish = function() {
-        if (!document.querySelector('.ripple ~ .pad')) each(document.getElementsByClassName('pad'), function(e) {
-            e.remove();
-        });
-        el.classList.remove('ripple');
-        el.classList.add('pad');
-    }
-}
-
-function dropTouch(e) {
-    players[e.identifier || 'mouse'].playbackRate = 1;
-}
-
-function each(l, fn) {
-    for (var i = 0; i < l.length; i++) {
-        fn(l[i]);
-    }
+    $(document.body).append(div);
+    setTimeout(function() { div.addClass('ripple'); }, 20);
+    setTimeout(function() { div.addClass('ripple2'); }, 200);
 }
 
 function goWhite() {
@@ -131,32 +78,32 @@ function goGold() {
 }
 
 function switchPage(page) {
-	$('.page').fadeOut();
-	$('.link').removeClass('selected');
+    $('.page').fadeOut();
+    $('.link').removeClass('selected');
     if (page === 'info') {
-    	$('#infoBtn').removeClass('whiteLink').addClass('selected selectedWhiteLink');
+        $('#infoBtn').removeClass('whiteLink').addClass('selected selectedWhiteLink');
         setTimeout(function(e) {
-            $('.info-page').fadeIn();
+            $('.info-page').fadeIn(600);
         }, 400)
     } else if (page === 'faq') {
-    	$('#faqBtn').removeClass('goldLink').addClass('selected selectedGoldLink');
+        $('#faqBtn').removeClass('goldLink').addClass('selected selectedGoldLink');
         setTimeout(function(e) {
-            $('.faq-page').fadeIn();
+            $('.faq-page').fadeIn(600);
         }, 400)
     } else if (page === 'schedule') {
-    	$('#scheduleBtn').removeClass('whiteLink').addClass('selected selectedWhiteLink');
+        $('#scheduleBtn').removeClass('whiteLink').addClass('selected selectedWhiteLink');
         setTimeout(function(e) {
-            $('.schedule-page').fadeIn();
+            $('.schedule-page').fadeIn(600);
         }, 400)
     } else if (page == 'sponsors') {
-    	$('#sponsorsBtn').removeClass('goldLink').addClass('selected selectedGoldLink');
+        $('#sponsorsBtn').removeClass('goldLink').addClass('selected selectedGoldLink');
         setTimeout(function(e) {
-            $('.sponsors-page').fadeIn();
+            $('.sponsors-page').fadeIn(600);
         }, 400)
     } else {
-    	$('#attendBtn').addClass('selected');
+        $('#attendBtn').addClass('selected');
         setTimeout(function(e) {
-            $('.attend-page').fadeIn();
+            $('.attend-page').fadeIn(600);
             $('#registrationForm').focus()
         }, 400)
     }

@@ -119,21 +119,23 @@ body {
 }
 
 .ripple {
-    position: absolute;
-    width: 100vmax;
-    height: 100vmax;
-    top: -50vmax;
-    left: -50vmax;
-    border-radius: 50%;
+  -webkit-transform: scale(100);
+  -moz-transform: scale(100);
+  -o-transform: scale(100);
+  -ms-transform: scale(100);
+  transform: scale(100);
+  transition: all 600ms ease;
+  z-index: -1;
 }
 
-.pad {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
+.ripple2 {
+  top: 0px !important;
+  left: 0px !important;
+  border-radius: 0% !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  transition: all 2400ms ease-out !important;
+  z-index: -1;
 }
 
 .info-page {
