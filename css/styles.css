@@ -119,23 +119,23 @@ body {
 }
 
 .ripple {
-  -webkit-transform: scale(100);
-  -moz-transform: scale(100);
-  -o-transform: scale(100);
-  -ms-transform: scale(100);
-  transform: scale(100);
-  transition: all 600ms ease;
-  z-index: -1;
+    -webkit-transform: scale(100);
+    -moz-transform: scale(100);
+    -o-transform: scale(100);
+    -ms-transform: scale(100);
+    transform: scale(100);
+    transition: all 600ms ease;
+    z-index: -1;
 }
 
 .ripple2 {
-  top: 0px !important;
-  left: 0px !important;
-  border-radius: 0% !important;
-  height: 100vh !important;
-  width: 100vw !important;
-  transition: all 2400ms ease-out !important;
-  z-index: -1;
+    top: 0px !important;
+    left: 0px !important;
+    border-radius: 0% !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    transition: all 2400ms ease-out !important;
+    z-index: -1;
 }
 
 .info-page {
@@ -146,7 +146,7 @@ body {
 }
 
 .info-page a {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 .faq-page {
@@ -155,6 +155,28 @@ body {
 
 .schedule-page {
     display: none;
+    color: #ffffff;
+}
+
+.schedule-page h4 {
+    text-align: center;
+}
+
+.schedule-page td:nth-child(even) {
+    background-color: #ffffff;
+    color: black;
+    border-color: #fcb914;
+    border-style: solid;
+}
+
+.schedule-page td {
+    padding: 8px;
+    max-width: 200px;
+}
+
+.schedule-page td:nth-child(odd) {
+    max-width: 100%;
+    text-align: right;
 }
 
 .sponsors-page {
