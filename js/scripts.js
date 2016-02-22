@@ -8,6 +8,10 @@ $(function() {
         loop: true
     });
 
+    $('#logo').click(function(e) {
+    	location.reload();
+    });
+
     $('#infoBtn').click(function(e) {
         goGold();
         addTouch(e, 'gold');
