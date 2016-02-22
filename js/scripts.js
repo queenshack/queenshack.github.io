@@ -9,7 +9,7 @@ $(function() {
     });
 
     $('#logo').click(function(e) {
-    	location.reload();
+        location.reload();
     });
 
     $('#infoBtn').click(function(e) {
@@ -47,10 +47,8 @@ $(function() {
 function addTouch(e, variant) {
     if (variant === 'gold') {
         var color = '#fcb914';
-        var border = '#ffffff';
     } else {
         var color = '#ffffff';
-        var border = '#fcb914';
     }
 
     var div = $('<div>').css({
@@ -60,7 +58,6 @@ function addTouch(e, variant) {
         "background-color": color,
         "border-radius": "50%",
         "border-style": "solid",
-        "border-color": border,
         "width": "20px",
         "height": "20px"
     });
