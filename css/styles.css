@@ -168,6 +168,11 @@ body {
 
 .faq-page {
     display: none;
+    margin-top: 5vh !important;
+}
+
+.faq-page b {
+	color: #fcb914;
 }
 
 .schedule-page {
