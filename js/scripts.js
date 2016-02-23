@@ -64,7 +64,7 @@ function addTouch(e, variant) {
     setTimeout(function() { div.addClass('ripple'); }, 20);
     setTimeout(function() { div.addClass('ripple2'); }, 200);
     setTimeout(function() {
-        $('.ripple').hide();
+        $('.ripple').remove();
         $('#canvas').css('background-color', color);
     }, 400)
 }
