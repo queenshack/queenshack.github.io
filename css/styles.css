@@ -217,6 +217,10 @@ body {
     width: 270px;
 }
 
+.sponsors-page .row {
+	margin-bottom: 30px !important;
+}
+
 .attend-page {
     display: none;
 }
