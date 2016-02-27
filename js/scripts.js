@@ -1,4 +1,6 @@
 $(function() {
+    var container_width = 115 * $(".nav-wrapper a").length;
+    $(".nav-wrapper").css("width", container_width);
     $(".people-ticker").typed({
         stringsElement: $('#peopleArray'),
         contentType: 'html',

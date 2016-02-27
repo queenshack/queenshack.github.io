@@ -22,6 +22,8 @@ body {
     height: 15vh;
     box-shadow: none;
     z-index: 3;
+    overflow: scroll;
+    width: 100vw;
 }
 
 .navbar #logo {
@@ -223,4 +225,19 @@ body {
 
 .attend-page {
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar .links {
+    	padding-top: 0;
+    }
+
+    .navbar #logo {
+    	height: 10vh;
+    	padding: 0;
+    }
+
+    .navbar .row {
+    	margin-bottom: 0;
+    }
 }
