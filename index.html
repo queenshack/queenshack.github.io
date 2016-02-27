@@ -6,6 +6,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/typed.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="js/materialize.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -14,9 +15,18 @@
 
 <body>
     <nav class="navbar transparent">
-        <div class="nav-wrapper black-text row">
-            <img id="logo" class="col s1" src="img/qnslogo.svg">
-            <ul class="links right col s11">
+        <div class="nav-wrapper mobile hide-on-med-and-up">
+            <ul class="mobbar">
+                <li><a id="infoBtnM" class="link whiteLink">INFO</a></li>
+                <li><a id="faqBtnM" class="link whiteLink">FAQ</a></li>
+                <li><a id="scheduleBtnM" class="link whiteLink">SCHEDULE</a></li>
+                <li><a id="sponsorsBtnM" class="link whiteLink">SPONSORS</a></li>
+                <li><a id="attendBtnM" class="waves-effect waves-light btn-large qhgold">ATTEND</a></li>
+            </ul>
+        </div>
+        <div class="nav-wrapper hide-on-small-only">
+            <img id="logo" src="img/qnslogo.svg">
+            <ul class="right links">
                 <li><a id="infoBtn" class="link whiteLink">INFO</a></li>
                 <li><a id="faqBtn" class="link whiteLink">FAQ</a></li>
                 <li><a id="scheduleBtn" class="link whiteLink">SCHEDULE</a></li>

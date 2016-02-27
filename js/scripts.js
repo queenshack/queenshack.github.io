@@ -1,6 +1,6 @@
 $(function() {
-    var container_width = 115 * $(".nav-wrapper a").length;
-    $(".nav-wrapper").css("width", container_width);
+    var container_width = 115 * $(".mobbar a").length;
+    $(".mobbar").css("width", container_width);
     $(".people-ticker").typed({
         stringsElement: $('#peopleArray'),
         contentType: 'html',
@@ -14,37 +14,43 @@ $(function() {
         location.reload();
     });
 
-    $('#infoBtn').click(function(e) {
+    $('#infoBtn, #infoBtnM').click(function(e) {
         goGold();
         addTouch(e, 'gold');
         switchPage('info');
     });
 
-    $('#faqBtn').click(function(e) {
+    $('#faqBtn, #faqBtnM').click(function(e) {
         goWhite();
         addTouch(e, 'white');
         switchPage('faq');
     });
 
-    $('#scheduleBtn').click(function(e) {
+    $('#scheduleBtn, #scheduleBtnM').click(function(e) {
         goGold();
         addTouch(e, 'gold');
         switchPage('schedule');
     });
 
-    $('#sponsorsBtn').click(function(e) {
+    $('#sponsorsBtn, #sponsorsBtnM').click(function(e) {
         goWhite();
         addTouch(e, 'white');
         switchPage('sponsors');
     });
 
-    $('#attendBtn').click(function(e) {
+    $('#attendBtn, #attendBtnM').click(function(e) {
         $(this).removeClass('qhgold').addClass('qhgold-text white selected');
         goGold();
         addTouch(e, 'gold');
         switchPage('attend');
     })
 });
+
+function goInfo(e) {
+    console.log(e)
+    addTouch(e, 'gold');
+    switchPage('info');
+}
 
 function addTouch(e, variant) {
     if (variant === 'gold') {
@@ -74,13 +80,13 @@ function addTouch(e, variant) {
 }
 
 function goWhite() {
-    $('#attendBtn').removeClass('qhgold-text white selected').addClass('qhgold');
+    $('#attendBtn, #attendBtnM').removeClass('qhgold-text white selected').addClass('qhgold');
     $('.link').css('color', '#fcb914');
     $('.link').removeClass('whiteLink').addClass('goldLink');
 }
 
 function goGold() {
-    $('#attendBtn').removeClass('qhgold').addClass('qhgold-text white');
+    $('#attendBtn, #attendBtnM').removeClass('qhgold').addClass('qhgold-text white');
     $('.link').css('color', '#ffffff');
     $('.link').removeClass('goldLink').addClass('whiteLink');
 }
