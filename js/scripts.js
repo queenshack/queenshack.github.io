@@ -112,7 +112,6 @@ function switchPage(page) {
         $('#attendBtn').addClass('selected');
         setTimeout(function(e) {
             $('.attend-page').fadeIn(600);
-            $('#registrationForm').focus()
         }, 400)
     }
 }

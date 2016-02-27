@@ -218,14 +218,9 @@ body {
 }
 
 .sponsors-page .row {
-	margin-bottom: 30px !important;
+    margin-bottom: 30px !important;
 }
 
 .attend-page {
     display: none;
-}
-
-.attend-page #registrationForm {
-    width: 100%;
-    min-height: 85vh;
 }
