@@ -60,12 +60,14 @@ function addTouch(e, variant) {
         "width": "20px",
         "height": "20px"
     });
+    $(document.body).css('overflow', 'hidden');
     $(document.body).append(div);
     setTimeout(function() { div.addClass('ripple'); }, 20);
     setTimeout(function() { div.addClass('ripple2'); }, 200);
     setTimeout(function() {
         $('.ripple').remove();
         $('#canvas').css('background-color', color);
+        $(document.body).removeAttr('style');
     }, 400)
 }
 
