@@ -9,6 +9,14 @@ $(function() {
         showCursor: false,
         loop: true
     });
+    $(".people-tickerM").typed({
+        stringsElement: $('#peopleArray'),
+        contentType: 'html',
+        typeSpeed: 3,
+        backDelay: 1500,
+        showCursor: false,
+        loop: true
+    });
 
     $('#logo').click(function(e) {
         location.reload();

@@ -129,11 +129,17 @@ body {
 
 .welcome-message {
     color: white;
-    margin: 100px 0px 0px 70px;
-    font-size: 45px;
+    margin: 10vh 0 0 10vw;
 }
 
 .welcome-message .people-ticker {
+    font-size: 45px;
+    display: inline-block;
+    padding: 0px 4px 0px 2px;
+}
+
+.welcome-message .people-tickerM {
+	font-size: 30px;
     display: inline-block;
     padding: 0px 4px 0px 2px;
 }
