@@ -73,12 +73,6 @@ $(function() {
     });
 });
 
-function goInfo(e) {
-    console.log(e)
-    addTouch(e, 'gold');
-    switchPage('info');
-}
-
 function addTouch(e, variant) {
     if (variant === 'gold') {
         var color = '#fcb914';
