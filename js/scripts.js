@@ -22,36 +22,55 @@ $(function() {
         location.reload();
     });
 
-    $('#infoBtn, #infoBtnM').click(function(e) {
+    routie('info', function() {
+        if ($('#infoBtn').position().left == 0 && $('#infoBtn').position().top == 0)
+            var pos = $('#infoBtnM').position();
+        else
+            var pos = $('#infoBtn').position();
         goGold();
-        addTouch(e, 'gold');
+        addTouch(pos, 'gold');
         switchPage('info');
     });
 
-    $('#faqBtn, #faqBtnM').click(function(e) {
+    routie('faq', function() {
+        if ($('#faqBtn').position().left == 0 && $('#faqBtn').position().top == 0)
+            var pos = $('#faqBtnM').position();
+        else
+            var pos = $('#faqBtn').position();
         goWhite();
-        addTouch(e, 'white');
+        addTouch(pos, 'white');
         switchPage('faq');
     });
 
-    $('#scheduleBtn, #scheduleBtnM').click(function(e) {
+    routie('schedule', function() {
+        if ($('#scheduleBtn').position().left == 0 && $('#scheduleBtn').position().top == 0)
+            var pos = $('#scheduleBtnM').position();
+        else
+            var pos = $('#scheduleBtn').position();
         goGold();
-        addTouch(e, 'gold');
+        addTouch(pos, 'gold');
         switchPage('schedule');
     });
 
-    $('#sponsorsBtn, #sponsorsBtnM').click(function(e) {
+    routie('sponsors', function() {
+        if ($('#sponsorsBtn').position().left == 0 && $('#sponsorsBtn').position().top == 0)
+            var pos = $('#sponsorsBtnM').position();
+        else
+            var pos = $('#sponsorsBtn').position();
         goWhite();
-        addTouch(e, 'white');
+        addTouch(pos, 'white');
         switchPage('sponsors');
     });
 
-    $('#attendBtn, #attendBtnM').click(function(e) {
-        $(this).removeClass('qhgold').addClass('qhgold-text white selected');
+    routie('attend', function() {
+        if ($('#attendBtn').position().left == 0 && $('#attendBtn').position().top == 0)
+            var pos = $('#attendBtnM').position();
+        else
+            var pos = $('#attendBtn').position();
         goGold();
-        addTouch(e, 'gold');
+        addTouch(pos, 'gold');
         switchPage('attend');
-    })
+    });
 });
 
 function goInfo(e) {
@@ -69,8 +88,8 @@ function addTouch(e, variant) {
 
     var div = $('<div>').css({
         "position": "absolute",
-        "left": e.pageX + 'px',
-        "top": e.pageY + 'px',
+        "left": e.left + 20,
+        "top": e.top + 20,
         "background-color": color,
         "border-radius": "50%",
         "width": "20px",
