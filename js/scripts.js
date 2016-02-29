@@ -19,7 +19,7 @@ $(function() {
     });
 
     $('#logo').click(function(e) {
-        location.reload();
+        window.location.href = 'https://queenshack.nyc'
     });
 
     routie('info', function() {
