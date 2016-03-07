@@ -400,5 +400,13 @@
         </script>
     </div>
 </body>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('.navbar a').click(function() {
+        var match = jQuery(this).attr('href').match(/#\S+/);
+        ga('send', 'pageview', location.pathname + match[0]);
+    });
+});
+</script>
 
 </html>
